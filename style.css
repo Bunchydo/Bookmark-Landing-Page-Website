@@ -351,6 +351,9 @@ body {
   background-color: var(--pink-button);
   color: white;
 }
+.hambugerImage{
+  display: none;
+}
 .get-it-on-firefox:hover {
   background-color: white;
   color: var(--black-text-color);

@@ -351,7 +351,7 @@ body {
   background-color: var(--pink-button);
   color: white;
 }
-.hambugerImage{
+.hamburgerImage{
   display: none;
 }
 .get-it-on-firefox:hover {
@@ -521,7 +521,7 @@ body {
 .hamburgerIcon{
   width: 8%;
 }
-.hambugerImage{
+.hamburgerImage{
   display: flex;
   align-items: center;
 }

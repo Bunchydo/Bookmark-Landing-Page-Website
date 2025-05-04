@@ -101,7 +101,7 @@ newsletterForm.addEventListener("submit", (e) => {
 
 let closeMenu = document.querySelector(".closeMenu");
 let mobileMenu = document.querySelector(".mobile-menu");
-let hamburgerImage = document.querySelector(".hambugerImage");
+let hamburgerImage = document.querySelector(".hamburgerImage");
 let navBar = document.querySelector(".nav-bar");
 
 hamburgerImage.addEventListener("click", () => {

@@ -135,6 +135,7 @@ body {
 
 /*Features Section*/
 .features-section {
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -180,7 +181,7 @@ body {
   width: 40%;
   display: flex;
   flex-direction: column;
-height: 100%;
+  height: 100%;
   justify-content: center;
   gap: 8%;
 }
@@ -370,11 +371,11 @@ height: 100%;
   fill: var(--pink-button);
   stroke: var(--pink-button);
 }
-.pink-color-arrow-hover path:hover{
+.pink-color-arrow-hover path:hover {
   color: var(--pink-button);
-    cursor: pointer;
-    fill: none;
-    stroke: var(--pink-button);
+  cursor: pointer;
+  fill: none;
+  stroke: var(--pink-button);
 }
 .blue-color:hover {
   background-color: white;
@@ -452,10 +453,244 @@ height: 100%;
   color: #eb5e60;
   /* no need for extra positioning here—it will sit at the element’s bottom edge */
 }
-.features-hover-1st{
-    border-bottom: 5px solid #eb5e60;
+.features-hover-1st {
+  border-bottom: 5px solid #eb5e60;
 }
 
 .active-tab {
   border-bottom: 5px solid #eb5e60;
+}
+
+@media screen and (max-width: 1146px) {
+  body {
+    padding: 2% 2%;
+  }
+
+  .hero-section__left-side {
+    width: 50%;
+  }
+
+  .hero-section__right-side {
+    width: 40%;
+  }
+
+  .hero-section-image {
+    width: 95%;
+  }
+
+  .newsletter {
+    margin-left: calc(-1 * 2vw);
+  }
+
+  .footer-section {
+    margin-left: calc(-1 * 2vw);
+    padding: 0 3%;
+  }
+
+  .footer-section-left-side {
+    width: 80%;
+  }
+
+  .footer-section-right-side {
+    width: 12%;
+  }
+}
+
+/* ≤ 900px */
+@media screen and (max-width: 900px) {
+  body {
+    padding: 2% 4%;
+  }
+
+  /* NAV → hamburger */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-bar::after {
+    content: url(images/icon-hamburger.svg);
+  }
+
+  /* HERO → stacked vertically */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  .hero-section-image {
+    display: none;
+  }
+
+  .hero-section__left-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section__left-side::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    background: url(images/illustration-hero.svg) center/contain no-repeat;
+    border-radius: 10px;
+  }
+
+  .hero-section__right-side {
+    display: none;
+  }
+
+  .hero-section__first-row,
+  .hero-section__second-row {
+    text-align: center;
+  }
+
+  .hero-section__third-row {
+    justify-content: center;
+    gap: 20%;
+  }
+
+  /* TABS → vertical & centered */
+  .tab-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    text-align: center;
+    margin-bottom: 10%;
+    align-items: center;
+  }
+  .tab-image {
+    width: 100%;
+  }
+  .tab-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .features-hover {
+    width: 50%;
+  }
+
+  /* FEATURES / DOWNLOAD / FAQ → taller & stacked */
+  .features-section,
+  .download-extension {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* let its children decide its height */
+    margin: 40% 0 0%;
+    margin-top: 6%;
+    /* download-extension override */
+  }
+  .general-container {
+    border-radius: 10px;
+    height: 100%;
+    min-height: 400px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 3px 30px #2442a360;
+    box-sizing: border-box;
+    padding: 2%;
+  }
+  .extension-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+  }
+  /* NEWSLETTER → vertical form */
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    margin-left: calc(-1 * 2vw);
+  }
+
+  .newsletter-third-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10%;
+    align-items: center;
+  }
+  #emailInput {
+    margin-bottom: 3%;
+  }
+  .newsletter-third-row input,
+  .newsletter-third-row button {
+    width: 60%;
+  }
+
+  /* FOOTER → stacked links */
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    align-items: center;
+  }
+
+  .footer-section-left-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-section-right-side {
+    display: flex;
+    flex-direction: row;
+    width: 12%;
+    margin-bottom: 3%;
+  }
+
+  .footer-section-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+  }
+
+  .footer-section-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+  }
+
+  /* Hiding extras */
+  .more-info-button {
+    display: none;
+  }
+
+  .tab-info-first-row {
+    text-align: center;
+  }
+  .frequently-asked-questions {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tab-info-right-side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: 8%;
+    margin-top: 4%;
+    
+  }
 }

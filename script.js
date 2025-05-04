@@ -105,7 +105,7 @@ let hamburgerImage = document.querySelector(".hamburgerImage");
 let navBar = document.querySelector(".nav-bar");
 
 hamburgerImage.addEventListener("click", () => {
-  const isMenuOpen = mobileMenu.style.display === "flex";
+  const isMenuOpen = mobileMenu.style.display == "flex";
 
   if (isMenuOpen) {
     mobileMenu.style.display = "none";

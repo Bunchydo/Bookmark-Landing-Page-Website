@@ -17,7 +17,7 @@ downArrow.forEach((arrow) => {
   });
 });
 
-let titleClickDropDown = document.querySelectorAll(".title-click")
+let titleClickDropDown = document.querySelectorAll(".title-click");
 titleClickDropDown.forEach((dropdown) => {
   dropdown.addEventListener("click", () => {
     let faqItemsContainer = dropdown.closest(".faq-display-flex");
@@ -28,12 +28,9 @@ titleClickDropDown.forEach((dropdown) => {
       answer.style.display = "none";
     } else {
       answer.style.display = "block";
-     
     }
   });
 });
-
-
 
 let firstTabContainer = document.querySelector(".first-tab-span");
 
@@ -100,4 +97,26 @@ newsletterForm.addEventListener("submit", (e) => {
     console.log("Invalid email");
     // Show error message or highlight the input
   }
+});
+
+let closeMenu = document.querySelector(".closeMenu");
+let mobileMenu = document.querySelector(".mobile-menu");
+let hamburgerImage = document.querySelector(".hambugerImage");
+let navBar = document.querySelector(".nav-bar");
+
+hamburgerImage.addEventListener("click", () => {
+  const isMenuOpen = mobileMenu.style.display === "flex";
+
+  if (isMenuOpen) {
+    mobileMenu.style.display = "none";
+    navBar.style.display = "flex";
+  } else {
+    mobileMenu.style.display = "flex";
+    navBar.style.display = "none";
+  }
+});
+
+closeMenu.addEventListener("click", () => {
+  mobileMenu.style.display = "none";
+  navBar.style.display = "flex";
 });

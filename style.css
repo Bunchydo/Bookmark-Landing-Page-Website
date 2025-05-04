@@ -354,6 +354,9 @@ body {
 .hamburgerImage{
   display: none;
 }
+.hambugerIcon{
+  display: none;
+}
 .get-it-on-firefox:hover {
   background-color: white;
   color: var(--black-text-color);
@@ -524,6 +527,9 @@ body {
 .hamburgerImage{
   display: flex;
   align-items: center;
+}
+.hambugerIcon {
+  display: block;
 }
   /* HERO → stacked vertically */
   .hero-section {
